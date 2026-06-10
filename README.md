@@ -19,9 +19,6 @@ The project is designed to handle multiple scenarios across 12 distinct instance
 │   ├── deliveries.csv        # Delivery requirements (pickup/dropoff locations, time windows)
 │   ├── traveltimes.csv       # Travel time matrix between all locations
 │   ├── result.csv            # Final optimized assignments and sequences
-│   └── graphs/               # Visualizations specific to Instance 1
-│       ├── route_map.png     # Geographic visualization of routes
-│       └── ...
 ├── instance2/               # Data and results for Instance 2
 │   └── ...
 ├── ...
@@ -32,7 +29,7 @@ The project is designed to handle multiple scenarios across 12 distinct instance
 ```
 
 ### File Descriptions:
-- **`Algorithm.py`**: The standalone script that processes an instance folder, runs the R&R optimization, and saves the output to `result.csv` and the `graphs/` directory.
+- **`Algorithm.py`**: The standalone script that processes an instance folder, runs the R&R optimization, and saves the output to `result.csv`.
 - **`instanceX/`**: Dedicated folders for each of the 12 test cases.
   - **`couriers.csv`**: Defines courier IDs, their starting locations, and load capacities.
   - **`deliveries.csv`**: Details each delivery's ID, capacity requirement, pickup location, dropoff location, and time window start.
@@ -47,7 +44,7 @@ The project is designed to handle multiple scenarios across 12 distinct instance
 
 ## Usage
 To run the optimization for a specific instance:
-1. Ensure all input CSVs are present in the target instance folder (e.g., `instance_1/`).
+1. Ensure all input CSVs are present in the target instance folder (e.g., `instance1/`).
 2. Run the solver (either via the notebook or the `algorithm.py` script).
 3. Review the `result.csv` for the optimized courier routes and check the `graphs/` folder for visual analysis.
 
